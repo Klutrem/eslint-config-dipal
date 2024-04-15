@@ -1,4 +1,4 @@
-module.default = {
+module.exports = {
   root: true,
   "env": {
     "browser": false,
