@@ -37,6 +37,7 @@ export default {
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/no-explicit-any": "off",
         // "@typescript-eslint/dot-notation": "off",
+        "func-style": "off",
         "sonarjs/no-duplicate-string": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
         "promise/catch-or-return": "warn",
