@@ -1,0 +1,15 @@
+{
+  "name": "dipal-eslint",
+  "version": "1.0.0",
+  "description": "dipal eslint configuration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.dipal.ru/Dipal/dipal-eslint.git"
+  },
+  "author": "dipal",
+  "license": "ISC"
+}
