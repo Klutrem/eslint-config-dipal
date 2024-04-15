@@ -1,4 +1,4 @@
-export default {
+module.default = {
   root: true,
   "env": {
     "browser": false,
@@ -36,7 +36,7 @@ export default {
         "import/no-extraneous-dependencies": "off",
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/no-explicit-any": "off",
-        // "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/dot-notation": "off",
         "func-style": "off",
         "sonarjs/no-duplicate-string": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
@@ -88,7 +88,7 @@ export default {
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "camelcase": "off",
-    // "dot-notation": "off",
+    "dot-notation": "off",
     "func-style": [
       "error",
       "declaration"
@@ -292,6 +292,6 @@ export default {
     "import/extensions": "off",
     "no-dupe-class-members": "off",
     "@typescript-eslint/no-dupe-class-members": "error",
-    // "@typescript-eslint/dot-notation": "off"
+    "@typescript-eslint/dot-notation": "off"
   }
 }
