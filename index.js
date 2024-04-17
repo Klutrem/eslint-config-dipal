@@ -292,6 +292,7 @@ module.exports = {
     "import/extensions": "off",
     "no-dupe-class-members": "off",
     "@typescript-eslint/no-dupe-class-members": "error",
-    "@typescript-eslint/dot-notation": "off"
+    "@typescript-eslint/dot-notation": "off",
+    "new-cap": "off"
   }
 }
