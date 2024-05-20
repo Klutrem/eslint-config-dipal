@@ -134,6 +134,21 @@ module.exports = {
     ],
     "no-new": "warn",
     "no-return-await": "error",
+    "no-restricted-syntax": [
+      "error",
+      {
+          "selector": "FunctionExpression",
+          "message": "Function expressions are not allowed."
+      },
+      {
+          "selector": "CallExpression[callee.name='setTimeout'][arguments.length!=2]",
+          "message": "setTimeout must always be invoked with two arguments."
+      },
+      {
+          "selector": "WithStatement",
+          "message": "Dont use with"
+      },
+    ],
     "no-sequences": "error",
     "no-unused-expressions": "error",
     "no-useless-computed-key": "warn",
