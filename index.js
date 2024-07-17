@@ -260,6 +260,7 @@ module.exports = {
       }
     ],
     "no-undef": "off",
+    "no-plusplus": "off",
     "no-underscore-dangle": "off",
     "max-len": [
       "error",
