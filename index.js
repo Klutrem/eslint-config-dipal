@@ -278,12 +278,6 @@ module.exports = {
     "no-empty-function": "off",
     "implicit-arrow-linebreak": "off",
     "function-paren-newline": "off",
-    "no-plusplus": [
-      "error",
-      {
-        "allowForLoopAfterthoughts": true
-      }
-    ],
     "import/no-unresolved": "off",
     "import/order": "off",
     "class-methods-use-this": "off",
