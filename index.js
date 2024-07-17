@@ -259,6 +259,7 @@ module.exports = {
         ]
       }
     ],
+    "no-undef": "off",
     "no-underscore-dangle": "off",
     "max-len": [
       "error",
