@@ -1,4 +1,4 @@
-const noUndefinedUnionInArgs = require("./rules/no-undefined-union-in-args.js");
+const noUndefinedUnionInArgs = require("./rules/no-union-args");
 module.exports = {
   root: true,
   env: {
@@ -249,4 +249,3 @@ module.exports = {
     "new-cap": "off",
   },
 };
-
