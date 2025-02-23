@@ -1,6 +1,6 @@
-import { createRule } from "./utils";
+const createRule = require("./utils");
 
-export default createRule({
+module.exports = createRule({
   name: "no-undefined-union-in-args",
   meta: {
     type: "problem",
