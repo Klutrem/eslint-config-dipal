@@ -1,3 +1,4 @@
+const noUndefinedUnionInArgs = require("./rules/no-undefined-union-in-args.js");
 module.exports = {
   root: true,
   env: {
@@ -50,7 +51,7 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "sonarjs", "prettier", "jsdoc", "promise"],
   rules: {
-    "custom/no-undefined-union-in-args": "error",
+    "no-undefined-union-in-args": noUndefinedUnionInArgs,
     semi: "off",
     "@typescript-eslint/semi": ["error", "always"],
     "import/no-cycle": "off",
