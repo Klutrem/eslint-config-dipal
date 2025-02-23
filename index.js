@@ -1,4 +1,5 @@
 const noUndefinedUnionInArgs = require("./rules/no-union-args");
+const tseslint = require("@typescript-eslint");
 module.exports = {
   root: true,
   env: {
@@ -49,9 +50,16 @@ module.exports = {
     sourceType: "module",
     project: ["./tsconfig.json"],
   },
-  plugins: ["@typescript-eslint", "sonarjs", "prettier", "jsdoc", "promise"],
+  plugins: {
+    "@typescript-eslint": require("@typescript-eslint/eslint-plugin"),
+    sonarjs: require("eslint-plugin-sonarjs"),
+    prettier: require("eslint-plugin-prettier"),
+    jsdoc: require("eslint-plugin-jsdoc"),
+    promise: require("eslint-plugin-promise"),
+    dipal: require("./rules/index"),
+  },
   rules: {
-    "no-undefined-union-in-args": noUndefinedUnionInArgs,
+    "dipal/no-union-args": "error",
     semi: "off",
     "@typescript-eslint/semi": ["error", "always"],
     "import/no-cycle": "off",
