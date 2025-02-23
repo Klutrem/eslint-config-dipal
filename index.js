@@ -1,36 +1,35 @@
+import noUndefinedUnionInArgs from "./rules/no-undefined-union-in-args.js";
+
 module.exports = {
   root: true,
-  "env": {
-    "browser": false,
-    "es2021": true
+  env: {
+    browser: false,
+    es2021: true,
   },
-  "extends": [
+  extends: [
     "prettier",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb-typescript/base",
     "airbnb-base",
     "plugin:sonarjs/recommended",
-    "plugin:jsdoc/recommended-typescript"
+    "plugin:jsdoc/recommended-typescript",
   ],
-  "globals": {
-    "vi": true,
-    "jest": true
+  globals: {
+    vi: true,
+    jest: true,
   },
-  "overrides": [
+  overrides: [
     {
-      "globals": {
-        "vi": true,
-        "jest": true
+      globals: {
+        vi: true,
+        jest: true,
       },
-      "files": [
-        "**/*.spec.ts",
-        "**/*.mock.ts"
-      ],
-      "env": {
-        "jest": true
+      files: ["**/*.spec.ts", "**/*.mock.ts"],
+      env: {
+        jest: true,
       },
-      "rules": {
+      rules: {
         "import/first": "off",
         "max-lines-per-function": "off",
         "import/no-extraneous-dependencies": "off",
@@ -41,31 +40,21 @@ module.exports = {
         "sonarjs/no-duplicate-string": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
         "promise/catch-or-return": "warn",
-        "@typescript-eslint/no-floating-promises": "warn"
-      }
-    }
+        "@typescript-eslint/no-floating-promises": "warn",
+      },
+    },
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": [
-      "./tsconfig.json"
-    ]
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json"],
   },
-  "plugins": [
-    "@typescript-eslint",
-    "sonarjs",
-    "prettier",
-    "jsdoc",
-    "promise"
-  ],
-  "rules": {
-    "semi": "off",
-    "@typescript-eslint/semi": [
-      "error",
-      "always"
-    ],
+  plugins: ["@typescript-eslint", "sonarjs", "prettier", "jsdoc", "promise"],
+  rules: {
+    "custom/no-undefined-union-in-args": "error",
+    semi: "off",
+    "@typescript-eslint/semi": ["error", "always"],
     "import/no-cycle": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "warn",
@@ -74,8 +63,8 @@ module.exports = {
     "promise/catch-or-return": [
       "error",
       {
-        "allowThen": false
-      }
+        allowThen: false,
+      },
     ],
     "@typescript-eslint/no-floating-promises": "error",
     "no-constructor-return": "error",
@@ -87,58 +76,49 @@ module.exports = {
     "no-unused-private-class-members": "warn",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "off",
-    "camelcase": "off",
+    camelcase: "off",
     "dot-notation": "off",
-    "func-style": [
-      "error",
-      "declaration"
-    ],
-    "max-depth": [
-      "warn",
-      4
-    ],
+    "func-style": ["error", "declaration"],
+    "max-depth": ["warn", 4],
     "max-lines": [
       "warn",
       {
-        "max": 500,
-        "skipBlankLines": true,
-        "skipComments": true
-      }
+        max: 500,
+        skipBlankLines: true,
+        skipComments: true,
+      },
     ],
     "max-lines-per-function": [
       "warn",
       {
-        "max": 40,
-        "skipBlankLines": true,
-        "skipComments": true
-      }
+        max: 40,
+        skipBlankLines: true,
+        skipComments: true,
+      },
     ],
     "no-confusing-arrow": "warn",
     "no-console": "off",
     "no-else-return": [
       "error",
       {
-        "allowElseIf": true
-      }
+        allowElseIf: true,
+      },
     ],
     "no-lone-blocks": "error",
     "no-lonely-if": "error",
     "no-magic-numbers": [
       "warn",
       {
-        "ignore": [
-          0,
-          1
-        ]
-      }
+        ignore: [0, 1],
+      },
     ],
     "no-new": "warn",
     "no-return-await": "error",
     "no-restricted-syntax": [
       "error",
       {
-          "selector": "WithStatement",
-          "message": "Dont use with"
+        selector: "WithStatement",
+        message: "Dont use with",
       },
     ],
     "no-sequences": "error",
@@ -159,91 +139,64 @@ module.exports = {
     "prefer-template": "error",
     "require-await": "error",
     "spaced-comment": "error",
-    "yoda": "error",
+    yoda: "error",
     "comma-spacing": [
       "error",
       {
-        "before": false,
-        "after": true
-      }
+        before: false,
+        after: true,
+      },
     ],
     "no-extra-parens": "off",
     "no-whitespace-before-property": "error",
     "no-trailing-spaces": "error",
-    "object-curly-spacing": [
-      "error",
-      "always"
-    ],
+    "object-curly-spacing": ["error", "always"],
     "object-curly-newline": "off",
-    "padded-blocks": [
-      "error",
-      "never"
-    ],
-    "space-before-blocks": [
-      "error",
-      "always"
-    ],
+    "padded-blocks": ["error", "never"],
+    "space-before-blocks": ["error", "always"],
     "space-before-function-paren": "off",
     "@typescript-eslint/await-thenable": "error",
     "@typescript-eslint/naming-convention": [
       "error",
       {
-        "selector": "variable",
-        "format": [
-          "camelCase",
-          "UPPER_CASE"
-        ]
+        selector: "variable",
+        format: ["camelCase", "UPPER_CASE"],
       },
       {
-        "selector": "parameter",
-        "format": [
-          "camelCase"
-        ],
-        "leadingUnderscore": "allow"
+        selector: "parameter",
+        format: ["camelCase"],
+        leadingUnderscore: "allow",
       },
       {
-        "selector": "memberLike",
-        "modifiers": [
-          "private"
-        ],
-        "format": [
-          "camelCase"
-        ],
-        "leadingUnderscore": "allow"
+        selector: "memberLike",
+        modifiers: ["private"],
+        format: ["camelCase"],
+        leadingUnderscore: "allow",
       },
       {
-        "selector": "memberLike",
-        "format": [
-          "camelCase",
-          "snake_case"
-        ],
-        "leadingUnderscore": "allow"
+        selector: "memberLike",
+        format: ["camelCase", "snake_case"],
+        leadingUnderscore: "allow",
       },
       {
-        "selector": "typeLike",
-        "format": [
-          "PascalCase"
-        ]
+        selector: "typeLike",
+        format: ["PascalCase"],
       },
       {
-        "selector": "variable",
-        "modifiers": [
-          "destructured"
-        ],
-        "format": null
+        selector: "variable",
+        modifiers: ["destructured"],
+        format: null,
       },
       {
-        "selector": "interface",
-        "format": [
-          "PascalCase"
-        ],
-        "custom": {
-          "regex": "^I[A-Z]",
-          "match": false
-        }
+        selector: "interface",
+        format: ["PascalCase"],
+        custom: {
+          regex: "^I[A-Z]",
+          match: false,
+        },
       },
       {
-        "selector": [
+        selector: [
           "classProperty",
           "objectLiteralProperty",
           "typeProperty",
@@ -251,13 +204,11 @@ module.exports = {
           "objectLiteralMethod",
           "typeMethod",
           "accessor",
-          "enumMember"
+          "enumMember",
         ],
-        "format": null,
-        "modifiers": [
-          "requiresQuotes"
-        ]
-      }
+        format: null,
+        modifiers: ["requiresQuotes"],
+      },
     ],
     "no-undef": "off",
     "no-plusplus": "off",
@@ -265,15 +216,15 @@ module.exports = {
     "max-len": [
       "error",
       {
-        "code": 120,
-        "ignorePattern": "(^import .*$|^export .*$)",
-        "ignoreStrings": true,
-        "ignoreComments": true,
-        "ignoreTemplateLiterals": true
-      }
+        code: 120,
+        ignorePattern: "(^import .*$|^export .*$)",
+        ignoreStrings: true,
+        ignoreComments: true,
+        ignoreTemplateLiterals: true,
+      },
     ],
     "operator-linebreak": "off",
-    "indent": "off",
+    indent: "off",
     "@typescript-eslint/indent": "off",
     "no-empty-function": "off",
     "implicit-arrow-linebreak": "off",
@@ -290,12 +241,13 @@ module.exports = {
     "@typescript-eslint/comma-dangle": "off",
     "comma-dangle": "off",
     "no-prototype-builtins": "off",
-    "quotes": "off",
+    quotes: "off",
     "@typescript-eslint/quotes": "off",
     "import/extensions": "off",
     "no-dupe-class-members": "off",
     "@typescript-eslint/no-dupe-class-members": "error",
     "@typescript-eslint/dot-notation": "off",
-    "new-cap": "off"
-  }
-}
+    "new-cap": "off",
+  },
+};
+
