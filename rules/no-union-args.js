@@ -1,4 +1,4 @@
-const createRule = require("./utils");
+const { createRule } = require("./utils");
 
 module.exports = createRule({
   name: "no-undefined-union-in-args",
