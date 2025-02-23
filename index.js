@@ -1,5 +1,3 @@
-import noUndefinedUnionInArgs from "./rules/no-undefined-union-in-args.js";
-
 module.exports = {
   root: true,
   env: {
