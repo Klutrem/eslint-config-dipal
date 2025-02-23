@@ -1,5 +1,3 @@
-const noUndefinedUnionInArgs = require("./rules/no-union-args");
-const tseslint = require("@typescript-eslint");
 module.exports = {
   root: true,
   env: {
