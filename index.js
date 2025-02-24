@@ -57,7 +57,7 @@ module.exports = {
     "dipal",
   ],
   rules: {
-    "no-undefined-union-in-args": "error",
+    "dipal/no-union-args": "error",
     semi: "off",
     "@typescript-eslint/semi": ["error", "always"],
     "import/no-cycle": "off",
