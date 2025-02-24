@@ -14,11 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.3.0",
-    "dipal-eslint-plugin": "github:bitswar/dipal-eslint-plugin",
     "eslint": "^8.53.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-airbnb": "^0.0.1-security",
+    "eslint-plugin-dipal": "github:bitswar/dipal-eslint-plugin",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-prettier": "4.2.1",
