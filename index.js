@@ -1,4 +1,3 @@
-const noUndefinedUnionInArgs = require("./rules/no-union-args");
 module.exports = {
   root: true,
   env: {
