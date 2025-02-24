@@ -49,7 +49,7 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "prettier", "jsdoc", "promise", "dipal"],
   rules: {
-    "no-undefined-union-in-args": noUndefinedUnionInArgs,
+    "no-undefined-union-in-args": "error",
     semi: "off",
     "@typescript-eslint/semi": ["error", "always"],
     "import/no-cycle": "off",
