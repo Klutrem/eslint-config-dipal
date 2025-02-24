@@ -25,7 +25,7 @@ importers:
         version: 0.0.1-security
       eslint-plugin-dipal:
         specifier: github:bitswar/dipal-eslint-plugin
-        version: https://codeload.github.com/bitswar/dipal-eslint-plugin/tar.gz/fd1930a0f49d223ebf2fe54a8ec8c397db4a2316(eslint@8.57.1)(typescript@5.2.2)
+        version: https://codeload.github.com/bitswar/dipal-eslint-plugin/tar.gz/3f269161b5ad23444c3a9b24727e883dce37fd40(eslint@8.57.1)(typescript@5.2.2)
       eslint-plugin-import:
         specifier: ^2.29.0
         version: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.2.2))(eslint@8.57.1)
@@ -498,8 +498,8 @@ packages:
   eslint-plugin-airbnb@0.0.1-security:
     resolution: {integrity: sha512-etPWgqKnv1plcSIt2cHZ/wgH5uQTSzFi4rnvr3YKMWdMzKb8Ca7LHP+F2IODv/J3wuzvkq9mCzwGxEG85KsioQ==}
 
-  eslint-plugin-dipal@https://codeload.github.com/bitswar/dipal-eslint-plugin/tar.gz/fd1930a0f49d223ebf2fe54a8ec8c397db4a2316:
-    resolution: {tarball: https://codeload.github.com/bitswar/dipal-eslint-plugin/tar.gz/fd1930a0f49d223ebf2fe54a8ec8c397db4a2316}
+  eslint-plugin-dipal@https://codeload.github.com/bitswar/dipal-eslint-plugin/tar.gz/3f269161b5ad23444c3a9b24727e883dce37fd40:
+    resolution: {tarball: https://codeload.github.com/bitswar/dipal-eslint-plugin/tar.gz/3f269161b5ad23444c3a9b24727e883dce37fd40}
     version: 1.0.0
 
   eslint-plugin-import@2.31.0:
@@ -1820,7 +1820,7 @@ snapshots:
 
   eslint-plugin-airbnb@0.0.1-security: {}
 
-  eslint-plugin-dipal@https://codeload.github.com/bitswar/dipal-eslint-plugin/tar.gz/fd1930a0f49d223ebf2fe54a8ec8c397db4a2316(eslint@8.57.1)(typescript@5.2.2):
+  eslint-plugin-dipal@https://codeload.github.com/bitswar/dipal-eslint-plugin/tar.gz/3f269161b5ad23444c3a9b24727e883dce37fd40(eslint@8.57.1)(typescript@5.2.2):
     dependencies:
       '@typescript-eslint/parser': 8.24.1(eslint@8.57.1)(typescript@5.2.2)
       '@typescript-eslint/utils': 8.24.1(eslint@8.57.1)(typescript@5.2.2)
