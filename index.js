@@ -1,3 +1,4 @@
+const noUndefinedUnionInArgs = require("./rules/no-union-args");
 module.exports = {
   root: true,
   env: {
@@ -10,7 +11,6 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "airbnb-typescript/base",
     "airbnb-base",
-    "plugin:sonarjs/recommended",
     "plugin:jsdoc/recommended-typescript",
   ],
   globals: {
@@ -35,7 +35,6 @@ module.exports = {
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/dot-notation": "off",
         "func-style": "off",
-        "sonarjs/no-duplicate-string": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
         "promise/catch-or-return": "warn",
         "@typescript-eslint/no-floating-promises": "warn",
@@ -48,16 +47,9 @@ module.exports = {
     sourceType: "module",
     project: ["./tsconfig.json"],
   },
-  plugins: {
-    "@typescript-eslint": require("@typescript-eslint/eslint-plugin"),
-    sonarjs: require("eslint-plugin-sonarjs"),
-    prettier: require("eslint-plugin-prettier"),
-    jsdoc: require("eslint-plugin-jsdoc"),
-    promise: require("eslint-plugin-promise"),
-    dipal: require("./rules/index"),
-  },
+  plugins: ["@typescript-eslint", "prettier", "jsdoc", "promise", "dipal"],
   rules: {
-    "dipal/no-union-args": "error",
+    "no-undefined-union-in-args": noUndefinedUnionInArgs,
     semi: "off",
     "@typescript-eslint/semi": ["error", "always"],
     "import/no-cycle": "off",
